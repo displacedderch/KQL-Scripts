@@ -1,0 +1,7 @@
+SigninLogs
+| where ResultType == 0
+| project UserPrincipalName, IPAddress, TimeGenerated
+| join kind=leftouter (
+    IdentityInfo
+    | project UserPrincipalName, Department
+  ) on UserPrincipalName
