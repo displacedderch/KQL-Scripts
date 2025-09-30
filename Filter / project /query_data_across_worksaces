@@ -1,0 +1,3 @@
+TableName
+
+| union workspace("WorkspaceName").TableName
