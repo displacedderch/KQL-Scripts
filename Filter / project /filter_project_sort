@@ -1,0 +1,4 @@
+SecurityEvent
+| where EventID == 4625 and TimeGenerated > ago(24h)
+| project TimeGenerated, Account, Computer, FailureReason
+| sort by TimeGenerated desc
